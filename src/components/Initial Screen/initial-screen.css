@@ -1,0 +1,145 @@
+.inital-div {
+    background-color: #fff4df;
+    height: 1080px;
+    width: 100vw;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 88px;
+}
+.logo img {
+    height: 51px;
+    margin-left: 50px;
+}
+.text-div {
+    margin-top: 140px;
+}
+
+.text-div p {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 210px;
+    /* justify-content: center; */
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 44px;
+}
+
+.text-div img {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container {
+    position: relative;
+    width: 500px; /* Make sure the container is wide enough for both divs */
+    height: 100px;
+    transform: translateY(20px);
+    /* border: 1px solid black; */
+}
+
+.box1,
+.box2 {
+    position: absolute;
+    width: 200px;
+    /* height: 200px; */
+}
+
+.box1 {
+    /* background-color: lightblue; */
+    left: 0;
+    top: 0;
+    z-index: 1; /* Ensure box1 is below box2 */
+}
+
+.box2 {
+    /* background-color: lightgreen; */
+    left: 200px; /* Start from the same position as box1 */
+    top: 0;
+    z-index: 2; /* Ensure box2 is above box1 */
+    animation: moveBox 5s linear infinite;
+    width: 600px;
+}
+.box2 p {
+    margin: 0px;
+    transform: translateY(9px);
+}
+
+@keyframes moveBox {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px); /* Move to the right */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shrinkGrow {
+    0%,
+    100% {
+        width: 539px; /* Original width */
+    }
+    50% {
+        width: 200px; /* Shrink to 50% width */
+    }
+}
+
+.shrink-grow {
+    width: 539px;
+    background-color: #3498db; /* Background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    animation: shrinkGrow 5s infinite; /* Duration and infinite repetition */
+    transition: width 2s;
+}
+
+@keyframes shrinkGrowBottom {
+    0%,
+    100% {
+        width: 158px; /* Original width */
+    }
+    50% {
+        width: 60px; /* Shrink to 50% width */
+    }
+}
+
+.shrink-grow-bottom {
+    width: 158px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    animation: shrinkGrowBottom 5s infinite; /* Duration and infinite repetition */
+    transition: width 2s;
+}
+@keyframes shrinkGrowMiddle {
+    0%,
+    100% {
+        width: 299px; /* Original width */
+    }
+    50% {
+        width: 150px; /* Shrink to 50% width */
+    }
+}
+
+.shrink-grow-middle {
+    width: 299px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    animation: shrinkGrowMiddle 5s infinite; /* Duration and infinite repetition */
+    transition: width 2s;
+}
